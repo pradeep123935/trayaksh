@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-montserrat: 'Montserrat', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #ffffff;
+    color: #172525;
+    font-family: var(--font-inter), sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.brand-name {
+  font-family: var(--font-montserrat), "Montserrat", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  line-height: 1;
+  color: #0d3b3b;
+}
+
+.brand-subtitle {
+  margin-top: 7px;
+  font-family: var(--font-montserrat), "Montserrat", "Arial", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  color: #172525;
+}
+
+.brand-name-light {
+  font-family: var(--font-montserrat), "Montserrat", "Arial", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.brand-subtitle-light {
+  margin-top: 8px;
+  font-family: var(--font-montserrat), "Montserrat", "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  line-height: 1.1;
+  color: #cbd5e1;
+}
+
+/* Unified Button Gradient for Navbar and Hero */
+.btn-gradient {
+  background: linear-gradient(135deg, #0a3331 0%, #134e4a 50%, #0a3331 100%);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  box-shadow: 0 4px 12px rgba(10, 51, 49, 0.3);
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #0d3e3b 0%, #165b57 50%, #0d3e3b 100%);
+  border-color: rgba(45, 212, 191, 0.5);
+  box-shadow: 0 6px 18px rgba(10, 51, 49, 0.4);
+}
+
+/* Custom smooth transitions and animations */
+.nav-link-active {
+  color: #0d3b3b;
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #0d3b3b;
+  border-radius: 1px;
 }
