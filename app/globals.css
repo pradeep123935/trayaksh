@@ -85,3 +85,56 @@
   background-color: #0d3b3b;
   border-radius: 1px;
 }
+
+/* Testimonials Pure CSS Carousel Rules */
+.slide-content {
+  display: none;
+}
+
+#s-content-1 {
+  display: grid;
+}
+
+#t-slide-1:checked ~ .carousel-body #s-content-1 { display: grid !important; }
+#t-slide-1:checked ~ .carousel-body #s-content-2 { display: none !important; }
+#t-slide-1:checked ~ .carousel-body #s-content-3 { display: none !important; }
+#t-slide-1:checked ~ .carousel-body #s-content-4 { display: none !important; }
+
+#t-slide-2:checked ~ .carousel-body #s-content-1 { display: none !important; }
+#t-slide-2:checked ~ .carousel-body #s-content-2 { display: grid !important; }
+#t-slide-2:checked ~ .carousel-body #s-content-3 { display: none !important; }
+#t-slide-2:checked ~ .carousel-body #s-content-4 { display: none !important; }
+
+#t-slide-3:checked ~ .carousel-body #s-content-1 { display: none !important; }
+#t-slide-3:checked ~ .carousel-body #s-content-2 { display: none !important; }
+#t-slide-3:checked ~ .carousel-body #s-content-3 { display: grid !important; }
+#t-slide-3:checked ~ .carousel-body #s-content-4 { display: none !important; }
+
+#t-slide-4:checked ~ .carousel-body #s-content-1 { display: none !important; }
+#t-slide-4:checked ~ .carousel-body #s-content-2 { display: none !important; }
+#t-slide-4:checked ~ .carousel-body #s-content-3 { display: none !important; }
+#t-slide-4:checked ~ .carousel-body #s-content-4 { display: grid !important; }
+
+/* Carousel Dots */
+#t-slide-1:checked ~ .carousel-dots #dot-1,
+#t-slide-2:checked ~ .carousel-dots #dot-2,
+#t-slide-3:checked ~ .carousel-dots #dot-3,
+#t-slide-4:checked ~ .carousel-dots #dot-4 {
+  width: 1.5rem !important;
+  background-color: #0d3b3b !important;
+}
+
+/* Carousel Arrows */
+.arrow-btn {
+  display: none;
+}
+#t-slide-1:checked ~ .carousel-left-arrows #prev-1,
+#t-slide-1:checked ~ .carousel-right-arrows #next-1,
+#t-slide-2:checked ~ .carousel-left-arrows #prev-2,
+#t-slide-2:checked ~ .carousel-right-arrows #next-2,
+#t-slide-3:checked ~ .carousel-left-arrows #prev-3,
+#t-slide-3:checked ~ .carousel-right-arrows #next-3,
+#t-slide-4:checked ~ .carousel-left-arrows #prev-4,
+#t-slide-4:checked ~ .carousel-right-arrows #next-4 {
+  display: flex !important;
+}

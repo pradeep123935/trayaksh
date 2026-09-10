@@ -59,7 +59,7 @@ export default function Hero() {
           {/* CTA Button */}
           <div className="pt-1 sm:pt-0 w-full sm:w-auto flex justify-center sm:justify-start">
             <a
-              href="#book"
+              href="#contact"
               className="group btn-gradient w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-md px-8 sm:px-12 lg:px-16 py-3 sm:py-3.5 text-sm sm:text-base font-medium text-white transition-all hover:brightness-110 active:scale-98"
               title="Book a Property Inspection"
             >

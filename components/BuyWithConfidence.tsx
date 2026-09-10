@@ -26,8 +26,8 @@ const FEATURES = [
 export default function BuyWithConfidence() {
   return (
     <section
-      id="confidence"
-      className="w-full bg-[#fdfbf7] py-6 sm:py-7 lg:py-8 border-b border-[#f5eee4]"
+      id="about"
+      className="w-full bg-[#f0f7f4] py-6 sm:py-7 lg:py-8"
       aria-labelledby="confidence-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -58,7 +58,7 @@ export default function BuyWithConfidence() {
                 const Icon = item.icon;
                 return (
                   <li key={item.subtitle}>
-                    <article className="h-full flex flex-col justify-start gap-1.5 sm:gap-2 rounded-xl bg-white px-4 py-3.5 sm:px-5 sm:py-4 shadow-2xs border border-[#f5eee4] hover:shadow-sm transition-all">
+                    <article className="h-full flex flex-col justify-start gap-1.5 sm:gap-2 rounded-xl bg-white px-4 py-3.5 sm:px-5 sm:py-4 border border-slate-200/80 shadow-2xs hover:shadow-xs transition-all">
                       <Icon className="h-9 w-9 sm:h-10 sm:w-10 text-[#0d3b3b] stroke-[1.5]" aria-hidden="true" />
                       <div className="space-y-0.5">
                         <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#0f172a] tracking-tight">

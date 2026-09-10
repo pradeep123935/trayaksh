@@ -3,16 +3,17 @@ import { Menu } from "lucide-react";
 
 const NAV_LINKS = [
   { name: "Home", href: "#home" },
-  { name: "Services", href: "#services" },
   { name: "About Us", href: "#about" },
-  { name: "Inspection Process", href: "#process" },
-  { name: "Reports", href: "#reports" },
+  { name: "Services", href: "#services" },
+  { name: "What We Inspect", href: "#inspect" },
+  { name: "Why Us", href: "#why-us" },
+  { name: "Reviews", href: "#testimonials" },
   { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b border-slate-100 shadow-xs">
+    <header className="sticky top-0 z-50 w-full bg-white shadow-xs">
       <div className="mx-auto flex h-16 sm:h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 relative">
         
         {/* Brand Logo & Title */}
@@ -41,7 +42,7 @@ export default function Navbar() {
 
         {/* Desktop Navigation Links (Semantic <nav> and <ul>) */}
         <nav className="hidden md:flex items-center" aria-label="Main Navigation">
-          <ul className="flex items-center gap-4 lg:gap-7 text-xs lg:text-sm font-medium text-[#172525]">
+          <ul className="flex items-center gap-3 lg:gap-6 text-xs lg:text-sm font-medium text-[#172525]">
             {NAV_LINKS.map((link, index) => (
               <li key={link.name}>
                 <a
@@ -60,7 +61,7 @@ export default function Navbar() {
         {/* Action Button & Pure CSS Mobile Menu Toggle */}
         <div className="flex items-center gap-3 sm:gap-4">
           <a
-            href="#book"
+            href="#contact"
             className="group btn-gradient hidden sm:inline-flex items-center justify-center gap-2 rounded-md px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-medium text-white transition-all hover:brightness-110 active:scale-98"
             title="Book a Property Inspection"
           >
@@ -102,7 +103,7 @@ export default function Navbar() {
             </ul>
             <div className="mt-3 pt-3 border-t border-slate-100">
               <a
-                href="#book"
+                href="#contact"
                 className="group btn-gradient flex w-full items-center justify-center gap-2 rounded-md px-4 py-3 text-sm font-medium text-white shadow-md"
               >
                 <span>Book an Inspection</span>
